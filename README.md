@@ -1,40 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# Anime Explorer
 
-First, run the development server:
+Anime Explorer is a responsive and user-friendly web application that allows users to browse, search, and manage a personal list of favorite anime titles. The application fetches real-time data from the Jikan API (a public REST API for MyAnimeList) and presents it in a clean, modern interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project demonstrates modern frontend development practices using the Next.js framework, Tailwind CSS for utility-based styling, and persistent client-side storage through localStorage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Live Site**: [https://anime-explorer-xi.vercel.app](https://anime-explorer-xi.vercel.app)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Anime Discovery
+- Displays a curated list of top-rated anime upon page load.
+- Implements infinite scroll to load more anime dynamically as the user browses.
+- Users can search for anime titles using the search bar; results are retrieved directly from the Jikan API.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Favorites Functionality
+- Each anime card includes a toggleable favorite button.
+- Favorited items are stored in localStorage, allowing persistence across sessions.
+- A dedicated "Favorites" page lists all saved titles.
+- Users can remove anime from the favorites list directly from this page.
 
-## Learn More
+### Detail Pages
+- Each anime links to a detailed page that includes:
+  - Cover image
+  - Synopsis
+  - Score
+  - Status
+  - Episode count
+- These details are presented in a structured, card-based layout for clarity and visual appeal.
 
-To learn more about Next.js, take a look at the following resources:
+### User Interface and Responsiveness
+- The site is built with Tailwind CSS, providing a modern and responsive UI.
+- Layouts and components adapt gracefully across screen sizes (mobile, tablet, and desktop).
+- Fixed navigation ensures consistent access to navigation links even during scroll.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+| Technology      | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| Next.js         | React-based framework for server-side rendering, routing, and optimizations |
+| Tailwind CSS    | Utility-first CSS framework for styling                                     |
+| Jikan API       | REST API used to fetch anime data                                           |
+| Vercel          | Hosting platform for seamless deployment                                    |
+| localStorage    | Browser-based persistence of favorite selections                           |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Installation and Local Development
+
+To run Anime Explorer locally, follow the steps below:
+
+### Prerequisites
+- Node.js and npm installed on your machine
+
+### Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/radhikaganesh29/anime-explorer.git
+   cd anime-explorer
+   npm install
+   npm run dev
