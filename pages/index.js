@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="pt-24 min-h-screen bg-gradient-to-br from-gray-100 to-pink-100 px-4 py-6">
+      <main className="pt-28 min-h-screen bg-gradient-to-br from-gray-100 to-pink-100 px-4 py-6">
         <div className="max-w-7xl mx-auto">
 
           <form

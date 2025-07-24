@@ -1,23 +1,23 @@
+// components/Header.js
+
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md px-4 sm:px-8 py-4">
-      <div className="relative flex items-center justify-center">
-        {/* Centered Title */}
-        <h1 className="text-2xl sm:text-3xl font-bold text-pink-600 text-center">
+    <header className="fixed top-0 left-0 w-full bg-white shadow z-50 px-4 sm:px-8 py-4">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+        {/* Anime Explorer centered on mobile, left on desktop */}
+        <h1 className="text-2xl font-bold text-pink-600 text-center sm:text-left">
           Anime Explorer
         </h1>
 
-        {/* Right-aligned link */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2">
-          <Link
-            href="/favorites"
-            className="text-pink-600 font-medium hover:underline text-lg"
-          >
-            ⭐ View Favorites
-          </Link>
-        </div>
+        {/* Favorites link right on desktop, centered under title on mobile */}
+        <Link
+          href="/favorites"
+          className="mt-2 sm:mt-0 text-pink-600 text-sm sm:text-base hover:underline"
+        >
+          ⭐ View Favorites
+        </Link>
       </div>
     </header>
   );
